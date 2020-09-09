@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import TicketControl from "./TicketControl";
+import Container from "react-bootstrap/Container";
 
 function App(){
   return (
     <React.Fragment>
-      <Header />
-      <TicketControl />
+        <Header />
+      <Container style={{backgroundColor: 'rgba(245, 245, 245, 0.5)', marginTop: '50px'}}>
+        <TicketControl />
+      </Container>
     </React.Fragment>
   );
 }

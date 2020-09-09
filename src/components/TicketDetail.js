@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "react-bootstrap/Button";
 
 function TicketDetail(props){
   const { ticket, onClickingDelete } = props;
@@ -9,8 +10,8 @@ function TicketDetail(props){
       <h1>Ticket Detail</h1>
       <h3>{ticket.location} - {ticket.names}</h3>
       <p><em>{ticket.issue}</em></p>
-      <button onClick={ props.onClickingEdit }>Update Ticket</button>
-      <button onClick={() => onClickingDelete(ticket.id) }>Close Ticket</button>
+      <Button style={{margin: 10}} variant="success" onClick={ props.onClickingEdit }>Update Ticket</Button>
+      <Button variant="danger" onClick={() => onClickingDelete(ticket.id) }>Close Ticket</Button>
       <hr/>
     </React.Fragment>
   );

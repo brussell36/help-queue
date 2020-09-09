@@ -13,7 +13,7 @@ function TicketList(props){
         location={ticket.location}
         issue={ticket.issue}
         id={ticket.id}
-        key={ticket.id}/>
+        key={ticket.id} />
       )}
     </React.Fragment>
   );

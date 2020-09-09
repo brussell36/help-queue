@@ -1,23 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ReusableForm(props) {
   return (
     <React.Fragment>
-      <form onSubmit={props.formSubmissionHandler}>
-        <input
-          type='text'
-          name='names'
-          placeholder='Pair Names' />
-        <input
-          type='text'
-          name='location'
-          placeholder='Location' />
-        <textarea
-          name='issue'
-          placeholder='Describe your issue.' />
-        <button type='submit'>{props.buttonText}</button>
-      </form>
+      <Form onSubmit={props.formSubmissionHandler}>
+        <Form.Group>
+          <Form.Control
+            type='text'
+            name='names'
+            placeholder='Pair Names' />
+        </Form.Group>
+        <Form.Group>
+          <Form.Control
+            type='text'
+            name='location'
+            placeholder='Location' />
+        </Form.Group>
+        <Form.Group>
+          <Form.Control
+            as='textarea'
+            name='issue'
+            placeholder='Describe your issue.' />
+        </Form.Group>
+        <div style={{padding: 10}}>
+          <Button variant="info" type='submit'>{props.buttonText}</Button>
+        </div>
+      </Form>
     </React.Fragment>
   );
 }

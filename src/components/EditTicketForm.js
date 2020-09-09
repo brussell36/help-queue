@@ -17,7 +17,9 @@ function EditTicketForm(props){
     </React.Fragment>
   );
 }
+
 EditTicketForm.propTypes = {
   onEditTicket: PropTypes.func
 };
+
 export default EditTicketForm;
