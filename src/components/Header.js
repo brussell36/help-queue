@@ -8,7 +8,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function Header(props) {
   return (
     <React.Fragment>
-      <Navbar bg="light" expand="lg">
+      <Navbar style={{backgroundColor: 'rgba(245, 245, 245, 0.75)'}} sticky="top" expand="lg">
       <Navbar.Brand href="#home">Help Queue</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

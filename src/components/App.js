@@ -7,7 +7,7 @@ function App(){
   return (
     <React.Fragment>
         <Header />
-      <Container style={{backgroundColor: 'rgba(245, 245, 245, 0.5)', marginTop: '50px'}}>
+      <Container style={{backgroundColor: 'rgba(245, 245, 245, 0.5)', marginTop: '150px'}}>
         <TicketControl />
       </Container>
     </React.Fragment>
