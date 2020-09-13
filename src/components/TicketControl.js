@@ -16,12 +16,8 @@ class TicketControl extends React.Component {
       editing: false
     };
   }
-  
-  // myStyle = () => { textAlign: 'center', padding: '20px' };
-  // const myReturn = myStyle();
 
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
@@ -93,7 +89,7 @@ class TicketControl extends React.Component {
           <TicketList 
             ticketList={this.state.masterTicketList} 
             onTicketSelection={this.handleChangingSelectedTicket} />
-        buttonText = "Add Ticket"
+        buttonText = "Add Ticket";
     }
     return (
       <div style={{ 
