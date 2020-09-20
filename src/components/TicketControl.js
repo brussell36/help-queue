@@ -58,12 +58,7 @@ class TicketControl extends React.Component {
   }
 
   handleDeletingTicket = (id) => {
-    const { dispatch } = this.props;
-    const action = {
-      type: 'DELETE_TICKET',
-      id: id
-    }
-    dispatch(action);
+    this.props.firestore.delete({collection: 'tickets', doc: id});
     this.setState({selectedTicket: null});
   }
 
@@ -93,8 +88,7 @@ class TicketControl extends React.Component {
         buttonText = "Return to Ticket List";
     } else {
         currentlyVisibleState = 
-          <TicketList 
-            ticketList={this.props.masterTicketList} 
+          <TicketList  
             onTicketSelection={this.handleChangingSelectedTicket} />
         buttonText = "Add Ticket";
     }
@@ -113,7 +107,6 @@ class TicketControl extends React.Component {
 }
 
 TicketControl.propTypes = {
-  masterTicketList: PropTypes.object,
   formVisibleOnPage: PropTypes.bool
 };
 
